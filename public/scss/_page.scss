@@ -1,0 +1,241 @@
+// page setup ---------------------------------------------
+
+html {
+    background-color: $background-color;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    position: relative;
+}
+
+body,select,input,textarea,a {
+    color: $font-color-fallback;
+    color: $font-color;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    font-size: $font-size;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+//styles---------------------------------------------
+body {
+    overflow-x: hidden;
+    font-size: 15px;
+    margin:0;
+
+    .top-buffer { margin-top:120px!important; }
+    .aside-menu-content{
+        position: absolute;
+        // top: 0;
+        // right: 0;
+        // bottom: 0;
+        // left: 0;
+        // width: 100%;
+        // height: 100%;
+        // min-height:3800px;
+        // overflow: hidden;
+        // -webkit-transform: none;
+        // transform: none;
+        z-index: 1;
+        // min-height: 4000px;//remove after dev
+        // background: -webkit-linear-gradient(10deg, $theme-color1  500px, rgba(0,0,0,0) 0), linear-gradient(-82deg, $theme-color2 90vw, $theme-color1 0);
+        // background: -o-linear-gradient(10deg, $theme-color1  500px, rgba(0,0,0,0) 0), linear-gradient(-82deg, $theme-color2 90vw, $theme-color1 0);
+        // background: -moz-linear-gradient(10deg, $theme-color1  500px, rgba(0,0,0,0) 0), linear-gradient(-82deg, $theme-color2 90vw, $theme-color1 0);
+        background: linear-gradient(0deg, $theme-color1  200px, rgba(0,0,0,0) 0), linear-gradient(-82deg, $theme-color2 calc(100% - 425px), $theme-color1 0);
+
+    }
+
+    .container-fluid{
+
+        &.main-container, .main-container{
+            margin: 0 auto;
+            padding: 0 25px;
+            max-width:1450px;
+            // border: 1px solid white; // remove after dev
+            
+            header{
+
+                a.logo{
+                    padding-top:65px;
+                    padding-left:100px;
+                    display:block;
+                    img{
+                        width: 205px;
+                        display: block;
+                    }    
+                }
+
+            }
+            ul.nav{
+                width: 195px;
+                margin-left: 125px;
+                padding-top: 55px;
+                float:left;
+                li{
+                    a{
+                        text-align:right;
+                        color: #fff;
+                        font-weight: bold;
+                        padding: 5px 15px;
+                        &:focus{
+                            background: transparent;
+                            outline: none;
+                        }
+                        &:hover{
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+            
+            &.hero-container{//fix responsive ribbon
+                min-height:800px;
+                position: relative;
+                .info-ribbon{
+                    height:325px;
+                    background:linear-gradient(100deg, rgba(0, 0, 0, .6)  95%, rgba(0,0,0,0) 0);
+                    width:155%;
+                    position: absolute;
+                    bottom: 0;
+                    left:0;
+                    margin-left: -100%;
+                    padding-right: 120px;
+                    color:$theme-color3;
+                    .info-container{
+                        padding:77px;
+                        height: 325px;
+                        float: right;
+                        width: 680px;
+                        //border: 1px solid red; //remove after dev
+                        p{
+                            font-weight:400;
+                            &.title{
+                                text-transform: uppercase;
+                                font-weight:700;
+                            }
+
+                        }
+                        h1{
+                            margin-bottom: 30px;
+                            margin-top: 30px;
+                            color:$text-color2;
+                            font-weight:300;
+                        }
+                    }
+                }
+            }
+        }//&main-container 
+        .hero-banner{
+            background: url(#{$imgPath}/harvard-gsas.jpg) no-repeat top center;
+            background-size:cover;
+            min-height: 800px;
+        } 
+        .testimony{
+            color:$theme-color3;
+
+            h1{
+                margin-top: 55px;
+            } 
+            p{
+                font-weight: 400;
+            }
+            h4{
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            .vertical-divider{
+                // height: 300px;
+                img{
+                    float:right;
+                    margin-right: 60px;
+                    margin-top: 120px;
+                    display:block;
+                }
+
+                border-right: thin solid #546364;
+            //     &:after {
+            //     content:"";
+            //     display: inline-block;
+            //     width: 0; height: 0;
+            //     border-top: 20px solid transparent;
+            //     border-right: none;
+            //     border-bottom: 20px solid transparent;
+            //     border-left: 20px solid #777;
+            // }
+
+        }
+    }
+
+    } //container-fluid
+    
+    footer{
+        padding-bottom: 150px;
+        width:100%;
+        // height:600px;
+        background:$theme-color1;
+        color:$theme-color3;
+        h2{
+            font-weight:300
+        }
+        h1{
+            font-size: 44px;
+            margin: 70px auto 60px;
+        }
+        .top-bg{
+            height: 202px; 
+            margin-bottom:-60px;           
+            background: linear-gradient(5deg, $theme-color1 200px, $theme-color2 0px);
+
+        }
+    }    
+
+} 
+a.arrow-link{
+    display: inline-block;
+    min-width: 100px;
+    position: relative;
+    left: 0;
+    top: 0;
+    background: $button-color;
+    height: 34px;
+    margin: 0px 9px 14px;
+    padding: 0px 22px;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85714em;
+    line-height: 2.83333em;
+    letter-spacing: .083em;
+    border-radius: 0;
+    &:before{
+        content: "";
+        position: absolute;
+        left: -10px;
+        top: 0;
+        border-top: 17px solid $button-color;
+        border-bottom: 17px solid $button-color;
+        border-left: 11px inset transparent;
+        -webkit-transform: rotate(0.05deg);
+        -moz-transform: scale(1.1);
+        -o-transform: rotate(0.05deg);
+        transform: rotate(0.05deg);
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        right: -11px;
+        top: 0;
+        border-top: 17px inset transparent;
+        border-bottom: 17px inset transparent;
+        border-left: 11px solid $button-color;
+    }
+}//arrow-link
+
+

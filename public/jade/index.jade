@@ -1,0 +1,160 @@
+doctype html
+//if lt IE 7
+  html.no-js.lt-ie9.lt-ie8.lt-ie7  
+//if IE 7
+  html.no-js.lt-ie9.lt-ie8  
+//if IE 8
+  html.no-js.lt-ie9  
+// [if gt IE 8] <!
+html(ng-app="challenge" ).no-js
+  // <![endif]
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title challenge
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href='libs/bootstrap/dist/css/bootstrap.css', rel='stylesheet')
+    link(rel='stylesheet', href='css/style.css')
+  body(ng-controller="hamburgerMenuController as _menu" )
+    //if lt IE 7
+      p.browsehappy
+        | You are using an 
+        strong outdated
+        |  browser. Please 
+        a(href='#') upgrade your browser
+        |  to improve your experience.
+    aside-menu#mobile-menu(side='left', width='300px', is-backdrop='true', push-content='true')
+      ul.nav.nav-stacked
+        li
+          a(href='#').grow About
+        li
+          a(href='#').grow Work
+        li
+          a(href='#').grow Articles
+        li
+          a(href='#').grow Contact
+    aside-menu-content(ng-style='onResizeBackground()' window-resize='' ng-view="" style="")
+      .container-fluid.main-container
+        header.row
+          .col-xs-12
+            a(href="#").logo
+              img(src="/img/dl_logo_white.svg", alt="logo").grow  
+
+          #nav-icon.hidden-sm.hidden-md.hidden-lg.hidden-xl(type='button', aside-menu-toggle='mobile-menu', ng-class="{'open': _menu.opened}")
+            span
+            span
+            span
+            span
+        .row
+          .col-xs-12.col-sm-6.col-md-5.col-lg-6
+            ul.nav.nav-stacked.hidden-xs
+              li
+                a(href='#').grow About
+              li
+                a(href='#').grow Work
+              li
+                a(href='#').grow Articles
+              li
+                a(href='#').grow Contact
+          .col-xs-12.col-sm-6.col-md-7.col-lg-6
+            .carousel
+              h1.pre Let's make the web a more 
+
+              .change_outer
+                .change_inner
+                  .element Intelligent
+                  .element Beautiful
+                  .element Dynamic
+                  .element Amazing
+              h1.post place.
+
+      .container-fluid.top-buffer
+        .row
+          .com-md-12
+            .hero-banner
+              .main-container.hero-container
+                    .info-ribbon(ng-style='onResizeRibbon()' window-resize='' ng-view="" style="")
+                      .info-container
+                        p.title Harvard Graduate School of Arts & Sciences
+                        h1 Long tradition, New look.
+                        p The Harvard School of Arts & Sciences gets a dynamic and welcoming website to match its vibrant community of students and scholars.
+      .container-fluid.main-container.top-buffer
+        .masonry
+          .grid(masonry)
+            //- grid sizer dictates the size of the grid (.col-xs-6) will be two columns of elements
+            .grid-sizer.col-xs-12.col-sm-6
+
+            .grid-item.col-xs-12.col-sm-6
+              a(href="#").grid-item-content.grow 
+                img(src="/img/columbia-student.jpg", alt="")
+                .info-ribbon
+                  p project
+                  h4 Columbia University center for career education 
+            .grid-item.col-xs-12.col-sm-6
+              .grid-item-content 
+                h1 We love to solve puzzles and craft things.
+                a(href='/contact').arrow-link.hvr-forward Get in touch
+                
+            .grid-item.col-xs-12.col-sm-6
+              a(href="#").grid-item-content.grow 
+                img(src="/img/ica-teens-art-2.jpg", alt="")
+                .info-ribbon
+                  p project
+                  h4 Columbia University center for career education 
+            .grid-item.col-xs-12.col-sm-6
+              a(href="#").grid-item-content.grow 
+                img(src="/img/columbia-engineering-image-2-2.jpg", alt="")
+                .info-ribbon
+                  p project
+                  h4 Columbia University center for career education 
+            .grid-item.col-xs-12.col-sm-6
+              a(href="#").grid-item-content.article.grow
+                h4 Article
+                p Why your website has the lifespan of a pet goldfish, and what to do about it.
+            .grid-item.col-xs-12
+              a(href="#").grid-item-content 
+                img(src="/img/columbia-engineering-image-1.jpg", alt="")
+                .info-ribbon
+                  p project
+                  h4 Columbia University center for career education 
+            .grid-item.col-xs-12.col-sm-6
+              a(href="#").grid-item-content.article.grow
+                h4 Article
+                p Why your website has the lifespan of a pet goldfish, and what to do about it.
+            .grid-item.col-xs-12.col-sm-6
+              a(href="#").grid-item-content 
+                img(src="/img/ica-teens-art-2.jpg", alt="")
+                .info-ribbon
+                  p project
+                  h4 Columbia University center for career education 
+            .grid-item.col-xs-12.col-sm-6
+              .grid-item-content 
+                a(href='/contact').arrow-link.more.hvr-forward More Work
+        .row.testimony
+          .col-md-6.col-xs-12.vertical-divider
+            img(src="/img/ica-logo-reverse.svg", alt="")
+          .col-md-6.col-xs-12
+            h1 “We trust Digital Loom implicitly.
+            p More awesome stuff about us here. More awesome stuff about us here. More awesome stuff about us here. More awesome stuff about us here. More awesome stuff about us here. More awesome stuff about us here. More awesome stuff about us here.”
+            h4 Kris Wilton  
+              br 
+              | Director of Communications
+
+      footer
+        .top-bg
+        .main-container.text-center
+          h2 "Ready to knock your next project out of the park?"
+          h1 So are we.
+          a(href='/contact').arrow-link.hvr-forward More Work
+
+
+
+
+    script(src='//localhost:35729/livereload.js')
+    script(src='libs/jquery/dist/jquery.slim.min.js')
+    script(src='libs/angular/angular.js') 
+    script(src='libs/aside-menu/aside-menu.min.js')
+    script(src='libs/masonry/masonry.pkgd.min.js')
+    script(src='js/build.min.js')
+    //- script(src='js/utils.js')

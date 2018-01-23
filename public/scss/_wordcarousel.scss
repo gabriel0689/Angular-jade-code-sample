@@ -1,0 +1,66 @@
+$carousel-numberOfElements: 3; 
+$carousel-fontSize: 44px;
+
+.carousel {
+	color:$theme-color3;
+	position: relative;
+	width: 100%;
+	max-width: 700px;
+    margin: 45px auto 0;
+	font-size: $carousel-fontSize;
+	line-height: $carousel-fontSize * 1.5;
+	min-height: 150px;
+	
+	h1{
+		float: left;
+		font-weight: 300;
+		font-size: $carousel-fontSize;
+		&.pre{
+			width:100%;
+
+		}
+		&.post{
+
+		}
+	}
+	.change_outer {
+		margin: 10px 10px 10px 0;
+		float: left;
+		height: $carousel-fontSize * 1.5;
+		overflow: hidden;
+		border-bottom:1px solid $underline-color;
+		text-align: center;
+		.change_inner {
+			color:$accent-color;
+			position: relative;
+			animation: rotate 8s ease-in-out infinite;
+
+		}
+		
+		.element {
+			display: block;
+			font-weight: 300;
+			// text-shadow: 2px 2px 2px #e67e22;
+		}
+		
+	}
+	
+}
+
+@keyframes rotate {
+	0%, 20% {
+		transform: translateY(0);
+	}
+	25%,45% {
+		transform: translateY($carousel-fontSize * -1.5);
+	}
+	50%,70% {
+		transform: translateY($carousel-fontSize * -3);
+	}
+	75%,95% {
+		transform: translateY($carousel-fontSize * -4.5);
+	}
+	100% {
+		transform: translateY($carousel-fontSize * -6);
+	}
+}

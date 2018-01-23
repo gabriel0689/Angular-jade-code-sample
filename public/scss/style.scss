@@ -1,0 +1,77 @@
+
+// base vars && mixins--------------------------------------------
+$imgPath : "/img";
+$base-font-family: unquote('sans-serif');
+$background-color: #fff;
+$font-family: 'Open Sans', sans-serif !important;
+$theme-color1: #171c1f;// dark background blue
+$theme-color2: #212b2c;// dark background green
+$theme-color3: #fff;//white
+$theme-color4: #529fa6;//masonry aqua
+$accent-color: #efb021; //mustard
+$button-color: #efb021;// mustard
+$text-color1:#fff;
+$text-color2:#ACC1C3;
+$underline-color: #929a9c;
+$disabled-color: #ccc;
+$line-height: 1.5em;
+$font-size: 14px;
+$font-color: rgba(0, 0, 0, .9);
+$font-color-fallback: #000;
+$font-weight: 300;
+$max-width: 78em;
+$default_anim_Duration: .3s;
+$slow_anim_Duration: 1s;
+
+
+
+@mixin hideTapHighlightColor(){
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+@mixin hardwareAccel(){
+    transform: translateZ(0);
+}
+
+@mixin improveAntiAlias(){
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+//animations---------------
+    .grow {
+        display: inline-block;
+        transition-duration: $default_anim_Duration;
+        transition-property: transform;
+
+        @include hideTapHighlightColor();
+        @include hardwareAccel();
+        @include improveAntiAlias();
+
+        &:hover, :focus, :active {
+            transform: scale(1.05);
+        }
+    }
+
+    .hvr-forward {
+        vertical-align: middle;
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px transparent;
+        transition-duration: $default_anim_Duration;
+        transition-property: transform;
+    
+        @include hideTapHighlightColor();
+        @include hardwareAccel();
+        @include improveAntiAlias();
+
+        &:hover, :focus, :active {
+            text-decoration: none;
+            -webkit-transform: translateX(8px);
+            transform: translateX(8px);
+        }
+    }
+@import 'open-sans'; 
+@import 'sidemenu'; 
+@import 'wordcarousel'; 
+@import 'masonry';
+@import 'page';
+@import 'media';

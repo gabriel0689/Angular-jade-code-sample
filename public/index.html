@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--if lt IE 7html.no-js.lt-ie9.lt-ie8.lt-ie7  
+-->
+<!--if IE 7html.no-js.lt-ie9.lt-ie8  
+-->
+<!--if IE 8html.no-js.lt-ie9  
+-->
+<!-- [if gt IE 8] <!-->
+<html ng-app="challenge" class="no-js">
+  <!-- <![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>challenge</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="libs/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body ng-controller="hamburgerMenuController as _menu">
+    <!--if lt IE 7
+    p.browsehappy
+      | You are using an 
+      strong outdated
+      |  browser. Please 
+      a(href='#') upgrade your browser
+      |  to improve your experience.
+    -->
+    <aside-menu id="mobile-menu" side="left" width="300px" is-backdrop="true" push-content="true">
+      <ul class="nav nav-stacked">
+        <li><a href="#" class="grow">About</a></li>
+        <li><a href="#" class="grow">Work</a></li>
+        <li><a href="#" class="grow">Articles</a></li>
+        <li><a href="#" class="grow">Contact</a></li>
+      </ul>
+    </aside-menu>
+    <aside-menu-content ng-style="onResizeBackground()" window-resize="" ng-view="" style="">
+      <div class="container-fluid main-container">
+        <header class="row">
+          <div class="col-xs-12"><a href="#" class="logo"><img src="/img/dl_logo_white.svg" alt="logo" class="grow"></a></div>
+          <div id="nav-icon" type="button" aside-menu-toggle="mobile-menu" ng-class="{'open': _menu.opened}" class="hidden-sm hidden-md hidden-lg hidden-xl"><span></span><span></span><span></span><span></span></div>
+        </header>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-5 col-lg-6">
+            <ul class="nav nav-stacked hidden-xs">
+              <li><a href="#" class="grow">About</a></li>
+              <li><a href="#" class="grow">Work</a></li>
+              <li><a href="#" class="grow">Articles</a></li>
+              <li><a href="#" class="grow">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-7 col-lg-6">
+            <div class="carousel">
+              <h1 class="pre">Let's make the web a more </h1>
+              <div class="change_outer">
+                <div class="change_inner">
+                  <div class="element">Intelligent</div>
+                  <div class="element">Beautiful</div>
+                  <div class="element">Dynamic</div>
+                  <div class="element">Amazing</div>
+                </div>
+              </div>
+              <h1 class="post">place.</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid top-buffer">
+        <div class="row">
+          <div class="com-md-12">
+            <div class="hero-banner">
+              <div class="main-container hero-container">
+                <div ng-style="onResizeRibbon()" window-resize="" ng-view="" style="" class="info-ribbon">
+                  <div class="info-container">
+                    <p class="title">Harvard Graduate School of Arts & Sciences</p>
+                    <h1>Long tradition, New look.</h1>
+                    <p>The Harvard School of Arts & Sciences gets a dynamic and welcoming website to match its vibrant community of students and scholars.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid main-container top-buffer">
+        <div class="masonry">
+          <div masonry class="grid">
+            <div class="grid-sizer col-xs-12 col-sm-6"></div>
+            <div class="grid-item col-xs-12 col-sm-6"><a href="#" class="grid-item-content grow"> <img src="/img/columbia-student.jpg" alt="">
+                <div class="info-ribbon">
+                  <p>project</p>
+                  <h4>Columbia University center for career education </h4>
+                </div></a></div>
+            <div class="grid-item col-xs-12 col-sm-6">
+              <div class="grid-item-content"> 
+                <h1>We love to solve puzzles and craft things.</h1><a href="/contact" class="arrow-link hvr-forward">Get in touch</a>
+              </div>
+            </div>
+            <div class="grid-item col-xs-12 col-sm-6"><a href="#" class="grid-item-content grow"> <img src="/img/ica-teens-art-2.jpg" alt="">
+                <div class="info-ribbon">
+                  <p>project</p>
+                  <h4>Columbia University center for career education </h4>
+                </div></a></div>
+            <div class="grid-item col-xs-12 col-sm-6"><a href="#" class="grid-item-content grow"> <img src="/img/columbia-engineering-image-2-2.jpg" alt="">
+                <div class="info-ribbon">
+                  <p>project</p>
+                  <h4>Columbia University center for career education </h4>
+                </div></a></div>
+            <div class="grid-item col-xs-12 col-sm-6"><a href="#" class="grid-item-content article grow">
+                <h4>Article</h4>
+                <p>Why your website has the lifespan of a pet goldfish, and what to do about it.</p></a></div>
+            <div class="grid-item col-xs-12"><a href="#" class="grid-item-content"> <img src="/img/columbia-engineering-image-1.jpg" alt="">
+                <div class="info-ribbon">
+                  <p>project</p>
+                  <h4>Columbia University center for career education </h4>
+                </div></a></div>
+            <div class="grid-item col-xs-12 col-sm-6"><a href="#" class="grid-item-content article grow">
+                <h4>Article</h4>
+                <p>Why your website has the lifespan of a pet goldfish, and what to do about it.</p></a></div>
+            <div class="grid-item col-xs-12 col-sm-6"><a href="#" class="grid-item-content"> <img src="/img/ica-teens-art-2.jpg" alt="">
+                <div class="info-ribbon">
+                  <p>project</p>
+                  <h4>Columbia University center for career education </h4>
+                </div></a></div>
+            <div class="grid-item col-xs-12 col-sm-6">
+              <div class="grid-item-content"> <a href="/contact" class="arrow-link more hvr-forward">More Work</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="row testimony">
+          <div class="col-md-6 col-xs-12 vertical-divider"><img src="/img/ica-logo-reverse.svg" alt=""></div>
+          <div class="col-md-6 col-xs-12">
+            <h1>“We trust Digital Loom implicitly.</h1>
+            <p>More awesome stuff about us here. More awesome stuff about us here. More awesome stuff about us here. More awesome stuff about us here. More awesome stuff about us here. More awesome stuff about us here. More awesome stuff about us here.”</p>
+            <h4>Kris Wilton  <br>Director of Communications</h4>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="top-bg"></div>
+        <div class="main-container text-center">
+          <h2>"Ready to knock your next project out of the park?"</h2>
+          <h1>So are we.</h1><a href="/contact" class="arrow-link hvr-forward">More Work</a>
+        </div>
+      </footer>
+    </aside-menu-content>
+    <script src="//localhost:35729/livereload.js"></script>
+    <script src="libs/jquery/dist/jquery.slim.min.js"></script>
+    <script src="libs/angular/angular.js"> </script>
+    <script src="libs/aside-menu/aside-menu.min.js"></script>
+    <script src="libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="js/build.min.js"></script>
+  </body>
+</html>
